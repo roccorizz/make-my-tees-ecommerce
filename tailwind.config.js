@@ -14,5 +14,14 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss'),
+    require('google-fonts')({
+      fonts: {
+        Roboto: ['400', '500'],
+        Staatliches: ['400'],
+      },
+      display: 'swap',
+    }),
+  ]
 }

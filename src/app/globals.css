@@ -1,27 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Staatliches&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  margin: auto;
+  
+}
+.text-normal{
+  color: #161616;
+  text-decoration: none;
+}
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+.font-roboto-regular {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+.font-staatliches {
+  font-family: 'Staatliches', sans-serif;
+}
+.container-mob{
+  padding-left: 18px;
+  padding-right: 16px;
+}
+@layer utilities {
+  .bg-external {
+    background-image: url('/public/back.png');
+    background-size: cover;
+    background-position: center;
   }
-}
+  .text-first{
+    color: #161616;
+  }
+  .text-second{
+    color: #474747;
+  }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
+ 
