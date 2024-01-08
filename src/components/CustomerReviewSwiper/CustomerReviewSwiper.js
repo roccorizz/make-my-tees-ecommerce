@@ -42,18 +42,8 @@ const CustomerReviewSwiper = ({ reviews }) => {
             pagination={{ clickable: true }}
             className="mt-[40px]"
             breakpoints={breakpoints}
-            renderPagination={(swiper, paginationEl) => {
-                return (
-                    <div className="swiper-pagination">
-                        {swiper.pagination.bullets.map((bullet, index) => (
-                            <span
-                                key={index}
-                                className={`swiper-pagination-bullet ${swiper.isEnd && index === swiper.pagination.bullets.length - 1 ? 'swiper-pagination-bullet-active' : ''}`}
-                            ></span>
-                        ))}
-                    </div>
-                );
-            }}
+
+
         >
             {reviews.map((review, index) => (
                 <SwiperSlide key={index} className="bg-white px-[25px] pt-[55px] md:pl-[28px] lg:pl-[28px] pb-[70px]  lg:pr-[23px] rounded-lg shadow-lg">
