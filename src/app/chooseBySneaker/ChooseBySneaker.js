@@ -7,31 +7,90 @@ import model1 from '/public/model1.png'
 import outfits1 from '/public/outfits1.png'
 import Image from 'next/image';
 const ChooseBySneaker = () => {
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-    const dropdownBtnRef = useRef(null);
-    const dropdownMenuRef = useRef(null);
+
+    const [isDropdownOpen1, setIsDropdownOpen1] = useState(false);
+    const [isDropdownOpen2, setIsDropdownOpen2] = useState(false);
+    const [isDropdownOpen3, setIsDropdownOpen3] = useState(false);
+
+    const dropdownBtnRef1 = useRef(null);
+    const dropdownMenuRef1 = useRef(null);
+
+    const dropdownBtnRef2 = useRef(null);
+    const dropdownMenuRef2 = useRef(null);
+
+    const dropdownBtnRef3 = useRef(null);
+    const dropdownMenuRef3 = useRef(null);
+
+    const handleClickOutside = (event, setIsDropdownOpen, dropdownBtnRef, dropdownMenuRef) => {
+        if (
+            dropdownBtnRef.current &&
+            !dropdownBtnRef.current.contains(event.target) &&
+            dropdownMenuRef.current &&
+            !dropdownMenuRef.current.contains(event.target)
+        ) {
+            setIsDropdownOpen(false);
+        }
+    };
 
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (
-                dropdownBtnRef.current &&
-                !dropdownBtnRef.current.contains(event.target) &&
-                dropdownMenuRef.current &&
-                !dropdownMenuRef.current.contains(event.target)
-            ) {
-                setIsDropdownOpen(false);
-            }
-        };
-
-        document.addEventListener('click', handleClickOutside);
-
+        document.addEventListener('click', (event) => handleClickOutside(event, setIsDropdownOpen1, dropdownBtnRef1, dropdownMenuRef1));
         return () => {
-            document.removeEventListener('click', handleClickOutside);
+            document.removeEventListener('click', (event) => handleClickOutside(event, setIsDropdownOpen1, dropdownBtnRef1, dropdownMenuRef1));
         };
     }, []);
 
-    const toggleDropdown = () => {
-        setIsDropdownOpen((prev) => !prev);
+    useEffect(() => {
+        document.addEventListener('click', (event) => handleClickOutside(event, setIsDropdownOpen2, dropdownBtnRef2, dropdownMenuRef2));
+        return () => {
+            document.removeEventListener('click', (event) => handleClickOutside(event, setIsDropdownOpen2, dropdownBtnRef2, dropdownMenuRef2));
+        };
+    }, []);
+
+    useEffect(() => {
+        document.addEventListener('click', (event) => handleClickOutside(event, setIsDropdownOpen3, dropdownBtnRef3, dropdownMenuRef3));
+        return () => {
+            document.removeEventListener('click', (event) => handleClickOutside(event, setIsDropdownOpen3, dropdownBtnRef3, dropdownMenuRef3));
+        };
+    }, []);
+
+
+    const toggleDropdown1 = () => {
+        setIsDropdownOpen1((prev) => !prev);
+    };
+
+    const toggleDropdown2 = () => {
+        setIsDropdownOpen2((prev) => !prev);
+    };
+
+    const toggleDropdown3 = () => {
+        setIsDropdownOpen3((prev) => !prev);
+    };
+    {
+        //     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+        //     const dropdownBtnRef = useRef(null);
+        //     const dropdownMenuRef = useRef(null);
+
+        //     useEffect(() => {
+        //         const handleClickOutside = (event) => {
+        //             if (
+        //                 dropdownBtnRef.current &&
+        //                 !dropdownBtnRef.current.contains(event.target) &&
+        //                 dropdownMenuRef.current &&
+        //                 !dropdownMenuRef.current.contains(event.target)
+        //             ) {
+        //                 setIsDropdownOpen(false);
+        //             }
+        //         };
+
+        //         document.addEventListener('click', handleClickOutside);
+
+        //         return () => {
+        //             document.removeEventListener('click', handleClickOutside);
+        //         };
+        //     }, []);
+
+        //     const toggleDropdown = () => {
+        //         setIsDropdownOpen((prev) => !prev);
     };
     return (
         <div className='flex flex-col justify-center items-center my-[140px] w-full bg-[url("/Rectangle144.png")] bg-cover bg-center'>
@@ -43,10 +102,10 @@ const ChooseBySneaker = () => {
 
                 <div className='max-w-[1634px] mt-[24px]'>
                     <div className='grid grid-cols-1 md:grid-cols-3 justify-items-center lg:grid-cols-3 gap-[233px] md:gap-[281px] lg:gap-[281px]'>
-                        <div className="relative inline-block text-center">
+                        <div className="inline-block text-center">
                             <button
-                                ref={dropdownBtnRef}
-                                onClick={toggleDropdown}
+                                ref={dropdownBtnRef1}
+                                onClick={toggleDropdown1}
                                 type="button"
                                 className="inline-flex justify-center items-center pt-[18px] pb-[14px] md:pt-[17px] md:pb-[19px] lg:pt-[17px] lg:pb-[19px] pl-[16px] pr-[20px] md:pl-[29px] md:pr-[26px] lg:pl-[29px] lg:pr-[26px] border border-gray-300 rounded-xl shadow-sm text-sm font-roboto-regular text-[14px] md:text-[16px] lg:text-[16px] text-white bg-[#2C2C31]  focus:outline-none mb-[68px]"
                             >
@@ -54,17 +113,17 @@ const ChooseBySneaker = () => {
                                 <Image className='ml-[39px] md:ml-[38px] lg:ml-[38px]' src={chevIcon} w={10} h={5} alt='' />
                             </button>
 
-                            <div ref={dropdownMenuRef} className={` absolute  ${isDropdownOpen ? '' : 'hidden'}`}>
+                            <div ref={dropdownMenuRef1} className={` ${isDropdownOpen1 ? '' : 'hidden'}`}>
                                 <div className=" mt-[68px] md:mt-[167px] lg:mt-[167px] ">
-                                    <Image className='w-[129px] h-[87px] md:w-[222px] md:h-[147px] ' src={adidas} alt='' />
+                                    <Image className='w-[129px] h-[87px] md:w-[222px] md:h-[147px] lg:w-[222px] lg:h-[147px] ' src={adidas} alt='' />
 
                                 </div>
                             </div>
                         </div>
                         <div className=" inline-block text-center ">
                             <button
-                                ref={dropdownBtnRef}
-                                onClick={toggleDropdown}
+                                ref={dropdownBtnRef2}
+                                onClick={toggleDropdown2}
                                 type="button"
                                 className="inline-flex justify-center items-center pt-[18px] pb-[14px] md:pt-[17px] md:pb-[19px] lg:pt-[17px] lg:pb-[19px] pl-[16px] pr-[20px] md:pl-[29px] md:pr-[26px] lg:pl-[29px] lg:pr-[26px] border border-gray-300 rounded-xl shadow-sm text-sm font-roboto-regular text-[14px] md:text-[16px] lg:text-[16px] text-white bg-[#2C2C31]  focus:outline-none mb-[68px]"
                             >
@@ -72,7 +131,7 @@ const ChooseBySneaker = () => {
                                 <Image className='ml-[39px] md:ml-[38px] lg:ml-[38px]' src={chevIcon} w={10} h={5} alt='' />
                             </button>
 
-                            <div ref={dropdownMenuRef} className={`   ${isDropdownOpen ? '' : 'hidden'}`}>
+                            <div ref={dropdownMenuRef2} className={`   ${isDropdownOpen2 ? '' : 'hidden'}`}>
                                 <div className=" justify-center mt-[69px] md:mt-[201px] lg:mt-[201px]">
                                     <Image className='w-[156px] h-[84px] md:w-[241px] md:h-[107px] lg:w-[241px] lg:h-[107px] object-center object-cover' src={model1} alt='' />
 
@@ -81,16 +140,16 @@ const ChooseBySneaker = () => {
                         </div>
                         <div className=" inline-block text-center">
                             <button
-                                ref={dropdownBtnRef}
-                                onClick={toggleDropdown}
+                                ref={dropdownBtnRef3}
+                                onClick={toggleDropdown3}
                                 type="button"
                                 className="inline-flex justify-center items-center pt-[18px] pb-[14px] md:pt-[17px] md:pb-[19px] lg:pt-[17px] lg:pb-[19px] pl-[16px] pr-[20px] md:pl-[29px] md:pr-[26px] lg:pl-[29px] lg:pr-[26px] border border-gray-300 rounded-xl shadow-sm text-sm font-roboto-regular text-[14px] md:text-[16px] lg:text-[16px] text-white bg-[#2C2C31]  focus:outline-none mb-[68px]"
                             >
-                                Choose Brand Name
+                                Choose Outfits
                                 <Image className='ml-[39px] md:ml-[38px] lg:ml-[38px]' src={chevIcon} w={10} h={5} alt='' />
                             </button>
 
-                            <div ref={dropdownMenuRef} className={`   ${isDropdownOpen ? '' : 'hidden'}`}>
+                            <div ref={dropdownMenuRef3} className={`   ${isDropdownOpen3 ? '' : 'hidden'}`}>
                                 <div className="py-1 justify-center mt-[71px] md:mt-[101px] lg:mt-[101px] ">
                                     <Image className='w-[154px] h-[157px] md:w-[218px] md:h-[221px]  lg:w-[218px] lg:h-[221px] object-cover object-center ' src={outfits1} alt='' />
 
@@ -100,7 +159,7 @@ const ChooseBySneaker = () => {
 
                     </div>
                 </div>
-                <button className='mt-[63px] md:mt-[94px] lg:mt-[94px] bg-[#FF5E01]  px-[35px] md:px-[61px] lg:px-[61px]  py-[12px]  lg:py-[16px] font-roboto-regular text-[14px] md:text-[22px] lg:text-[22px] text-white rounded-xl'>Search</button>
+                <button className='mt-[63px] md:mt-[57px] lg:mt-[57px] bg-[#FF5E01]  px-[35px] md:px-[61px] lg:px-[61px]  py-[12px]  lg:py-[16px] font-roboto-regular text-[14px] md:text-[22px] lg:text-[22px] text-white rounded-xl'>Search</button>
                 <p className='mt-[16px] md:mt-[33px] lg:mt-[33px] font-roboto-regular text-[14px] md:text-[18px] lg:text-[18px]'>Can’t find your sneaker?</p>
             </div >
         </div >
