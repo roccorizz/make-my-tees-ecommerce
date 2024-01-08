@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Shirt from '@/components/Products/Shirts';
 const FeaturedProducts = () => {
@@ -49,15 +49,32 @@ const FeaturedProducts = () => {
     ];
 
     const [selectedTab, setSelectedTab] = useState('justDropped');
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    // Use useEffect to set the initial window width and update it on window resize
+    useEffect(() => {
+        setWindowWidth(window.innerWidth);
+
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        // Add event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Remove event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     const renderShirts = () => {
         const filteredShirts = shirtsData.filter((shirt) => {
-
             return true;
         });
 
         // Show only 3 items in a single column on small screens
-        if (window.innerWidth < 640) {
+        if (windowWidth < 640) {
             const limitedShirts = filteredShirts.slice(0, 3);
             return limitedShirts.map((shirt, index) => (
                 <Shirt key={index} shirt={shirt} />
