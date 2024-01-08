@@ -12,114 +12,65 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn, FaArrowRight } from "react-icons/
 const Footer = () => {
     return (
         <footer className="flex flex-col  justify-center ">
-            {/* <div className="flex  items-center w-full py-[35px] px-[289px] justify-between bg-[#D3F4FD] md:bg-[#9FDAFA]">
 
-                <div className='w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4'>
-
-                    <div className=" flex items-center  gap-5 justify-center ">
-
-                        <Image className=" mt-[-3px] w-[24px] h-[18px] md:w-[49px] md:h-[47px] " src={group1} alt="" />
-                        <div className="flex flex-col items-center">
-                            <h4 className="text-[12px] md:text-[18px] font-roboto">Free Shipping</h4>
-                            <p className=" text-[10px] md:text-[13px] leading-[22.4px] tracking-tight font-roboto-regular">
-                                On Orders Over $100
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className='hidden md:flex w-[51px] h-0 rotate-[90deg] border-[0.5px] border-[#161616]  justify-center'></div>
-                <div className='w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4'>
-
-                    <div className="flex gap-5 justify-center flex-shrink-0">
-                        <Image className="mt-[5px] w-[18px] h-[21px] md:w-[39px] md:h-[39px] " src={group2} alt="" />
-                        <div className="flex flex-col">
-                            <h4 className="text-[18px] font-roboto">Secure Payment</h4>
-                            <p className="text-[13px] leading-[22.4px] tracking-tight font-roboto-regular">
-                                100% Secure Guarantee
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className='hidden md:flex w-[51px] h-0 rotate-[90deg] border-[0.5px] border-[#161616]  justify-center'></div>
-                <div className='w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4'>
-
-                    <div className="flex gap-5  justify-center flex-shrink-0">
-                        <Image className="mt-[5px] w-[17px] h-[22px] md:w-[48px] md:h-[48px] " src={group4} alt="" />
-                        <div className="flex flex-col">
-                            <h4 className="text-[18px] font-roboto">Easy Process</h4>
-                            <p className="text-[13px] leading-[22.4px] tracking-tight font-roboto-regular">Order in 2 Minutes</p>
-                        </div>
-                    </div>
-                </div>
-                <div className='hidden md:flex w-[51px] h-0 rotate-[90deg] border-[0.5px] border-[#161616]  justify-center'></div>
-                <div className='w-full sm:w-1/2 md:w-1/4 lg:w-1/4 xl:w-1/4'>
-
-                    <div className="flex gap-5 justify-center flex-shrink-0">
-                        <Image className="mt-[4px] ml-[1px] w-[20px] h-[19px] md:w-[40px] md:h-[38px]" src={group3} alt="" />
-                        <div className="flex flex-col">
-                            <h4 className="text-[18px] font-roboto">Special Support</h4>
-                            <p className="text-[13px] leading-[22.4px] tracking-tight font-roboto-regular">24/7 Dedicated Support</p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div> */}
-            <div className='w-full bg-[#D3F4FD] md:bg-[#9FDAFA] bg-cover pt-20 mb-50 text-black'>
-                <div className='max-w-7xl ml-[18px] mr-[16px] md:mx-auto lg:mx-auto'>
-                    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 ">
+            <div className='w-full bg-[#D3F4FD] md:bg-[#9FDAFA] bg-cover mb-50 text-black'>
+                <div className='max-w-[1351px]  mx-auto my-[38px]'>
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-y-[24px]  ">
                         {/* Item 1 */}
-                        <div className="w-full md:w-full lg:w-1/4 xl:w-1/4">
-                            <div className="flex items-center gap-5 justify-center">
-                                <Image className=" mt-[-3px] w-[24px] h-[18px] md:w-[49px] md:h-[47px] " src={group1} alt="" />
-                                <div className="flex flex-col items-center">
-                                    <h4 className="text-[12px] md:text-[18px] font-roboto">Free Shipping</h4>
-                                    <p className=" text-[10px] md:text-[13px] leading-[22.4px] tracking-tight font-roboto-regular">
+                        <div className='flex justify-around'>
+                            <div className=" flex flex-col md:flex-row lg:flex-row items-center gap-[12px] md:gap-[20px] lg:gap-[20px] justify-center text-center">
+                                <Image className=" mt-[-3px] w-[24px] h-[18px] md:w-[49px] md:h-[47px] lg:w-[49px] lg:h-[47px] " src={group1} alt="" />
+                                <div className="flex flex-col">
+                                    <h4 className="text-[12px] md:text-[18px] lg:text-[18px] font-roboto">Free Shipping</h4>
+                                    <p className=" text-[10px] md:text-[13px] lg:text-[13px] leading-[12px] md:leading-[22.4px] lg:leading-[22.4px] tracking-tight font-roboto-regular">
                                         On Orders Over $100
                                     </p>
                                 </div>
                             </div>
+                            <div className='border-black border-r-[0.5px] w-[51px] hidden md:grid lg:grid '></div>
+
                         </div>
+
 
                         {/* Item 2 */}
-                        <div className="w-full md:w-full lg:w-1/4 xl:w-1/4">
-                            <div className="flex gap-5 justify-center flex-shrink-0">
-                                <Image className=" mt-[-3px] w-[24px] h-[18px] md:w-[49px] md:h-[47px] " src={group1} alt="" />
-                                <div className="flex flex-col items-center">
-                                    <h4 className="text-[12px] md:text-[18px] font-roboto">Free Shipping</h4>
-                                    <p className=" text-[10px] md:text-[13px] leading-[22.4px] tracking-tight font-roboto-regular">
-                                        On Orders Over $100
+                        <div className='flex justify-around'>
+                            <div className=" flex flex-col md:flex-row lg:flex-row items-center gap-[12px] md:gap-[20px] lg:gap-[20px] justify-center text-center">
+                                <Image className=" mt-[5px] w-[24px] h-[18px] md:w-[49px] md:h-[47px] lg:w-[49px] lg:h-[47px] " src={group2} alt="" />
+                                <div className="flex flex-col">
+                                    <h4 className="text-[12px] md:text-[18px] lg:text-[18px] font-roboto">Secure Payment</h4>
+                                    <p className=" text-[10px] md:text-[13px] lg:text-[13px] leading-[12px] md:leading-[22.4px] lg:leading-[22.4px] tracking-tight font-roboto-regular">
+                                        100% Secure Guarantee
                                     </p>
                                 </div>
                             </div>
+                            <div className='border-black border-r-[0.5px] w-[51px] hidden md:grid lg:grid '></div>
                         </div>
 
                         {/* Item 3 */}
-                        <div className="w-full md:w-full lg:w-1/4 xl:w-1/4">
-                            <div className="flex gap-5 justify-center flex-shrink-0">
-                                <Image className=" mt-[-3px] w-[24px] h-[18px] md:w-[49px] md:h-[47px] " src={group1} alt="" />
-                                <div className="flex flex-col items-center">
-                                    <h4 className="text-[12px] md:text-[18px] font-roboto">Free Shipping</h4>
-                                    <p className=" text-[10px] md:text-[13px] leading-[22.4px] tracking-tight font-roboto-regular">
-                                        On Orders Over $100
+                        <div className='flex justify-around'>
+                            <div className=" flex flex-col md:flex-row lg:flex-row items-center gap-[12px] md:gap-[20px] lg:gap-[20px] justify-center text-center">
+                                <Image className=" w-[24px] h-[18px] md:w-[49px] md:h-[47px] lg:w-[49px] lg:h-[47px] " src={group4} alt="" />
+                                <div className="flex flex-col">
+                                    <h4 className="text-[12px] md:text-[18px] lg:text-[18px] font-roboto">Easy Process</h4>
+                                    <p className=" text-[10px] md:text-[13px] lg:text-[13px] leading-[12px] md:leading-[22.4px] lg:leading-[22.4px] tracking-tight font-roboto-regular">
+                                        Order in 2 Minutes
                                     </p>
                                 </div>
                             </div>
+                            <div className='border-black border-r-[0.5px] w-[51px] hidden md:grid lg:grid '></div>
                         </div>
 
                         {/* Item 4 */}
-                        <div className="w-full md:w-full lg:w-1/4 xl:w-1/4">
-                            <div className="flex gap-5 justify-center flex-shrink-0">
-                                <Image className=" mt-[-3px] w-[24px] h-[18px] md:w-[49px] md:h-[47px] " src={group1} alt="" />
-                                <div className="flex flex-col items-center">
-                                    <h4 className="text-[12px] md:text-[18px] font-roboto">Free Shipping</h4>
-                                    <p className=" text-[10px] md:text-[13px] leading-[22.4px] tracking-tight font-roboto-regular">
-                                        On Orders Over $100
-                                    </p>
-                                </div>
+                        <div className=" flex flex-col md:flex-row lg:flex-row items-center gap-[12px] md:gap-[20px] lg:gap-[20px] justify-center text-center">
+                            <Image className=" mt-[4px] ml-[1px] w-[24px] h-[18px] md:w-[49px] md:h-[47px] lg:w-[49px] lg:h-[47px] " src={group3} alt="" />
+                            <div className="flex flex-col">
+                                <h4 className="text-[12px] md:text-[18px] lg:text-[18px] font-roboto">Special Support</h4>
+                                <p className=" text-[10px] md:text-[13px] lg:text-[13px] leading-[12px] md:leading-[22.4px] lg:leading-[22.4px] tracking-tight font-roboto-regular">
+                                    24/7 Dedicated Support
+                                </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -129,7 +80,7 @@ const Footer = () => {
             {/* link section */}
             <div className='w-full bg-[url("/back.png")] bg-cover pt-20 mb-50 text-black'>
 
-                <div className='max-w-7xl ml-[18px] mr-[16px] md:mx-auto lg:mx-auto'>
+                <div className='max-w-[1351px] ml-[18px] mr-[16px] md:mx-auto lg:mx-auto'>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 '>
                         <div>
                             <div className='flex justify-between'>
@@ -179,10 +130,10 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='hidden md:grid lg:grid w-full h-0 my-10 border-[1px] border-[#161616] opacity-[20%] justify-center'></div>
+                    <div className='hidden md:grid lg:grid w-full  mt-[64px] mb-[37px] border-[1px] border-[#161616] opacity-[20%] justify-center'></div>
                 </div>
 
-                <div className='max-w-[1349px]  text-gray-500 ml-[18px] mr-[16px] md:mx-auto lg:mx-auto'>
+                <div className='max-w-[1351px]  text-gray-500 sm:ml-[18px] sm:mr-[16px] md:mx-auto lg:mx-auto'>
                     <div className='  flex flex-row  mx-auto justify-between items-center'>
                         <div className='text-center'>
                             <Image className=' w-[126px] h-[14px] md:w-[199px] md:h-[22px] lg:w-[199px] lg:h-[22px]' src={logo} alt='logo' />
