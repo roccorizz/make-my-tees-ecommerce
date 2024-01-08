@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import navToogle from '../../../public/toggle.svg'
 import Logo from '../../../public/Logo.svg'
-import searchButton from '../../../public/search.svg'
+import searchButton from '../../../public/Search.svg'
 import about from '../../../public/about.svg'
 import cart from '../../../public/cart.svg'
 import '../globals.css';
