@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import ProductDetail from '@/components/Products/ProductDetail';
 const PopularSneakers = () => {
@@ -58,7 +58,24 @@ const PopularSneakers = () => {
     ];
 
     const [selectedTab, setSelectedTab] = useState('recentlyAdded');
+    const [windowWidth, setWindowWidth] = useState(0);
 
+    // Use useEffect to set the initial window width and update it on window resize
+    useEffect(() => {
+        setWindowWidth(window.innerWidth);
+
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        // Add event listener for window resize
+        window.addEventListener('resize', handleResize);
+
+        // Remove event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     const renderSneakers = () => {
         const filteredSneakers = productsData.filter((product) => {
 
@@ -66,7 +83,7 @@ const PopularSneakers = () => {
         });
 
         // Show only 3 items in a single column on small screens
-        if (window.innerWidth < 640) {
+        if (windowWidth < 640) {
             const limitedSneakers = filteredSneakers.slice(0, 3);
             return limitedSneakers.map((product, index) => (
                 <ProductDetail key={index} product={product} />
@@ -108,7 +125,7 @@ const PopularSneakers = () => {
                 <div className='w-[288px] lg:w-[1602px] border-b-2 border-[#D9D9D9]'></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-[25px] mt-[44px] md:mt-[54px] lg:mt-[54px]">{renderSneakers()}</div>
-            {window.innerWidth < 640 && (
+            {windowWidth < 640 && (
                 <button
                     className="uppercase flex lg:hidden md:hidden text-[14px] md:text-[24px] lg:text-[24px] font-roboto-regular py-[12px] px-[23px] mt-[32px] mb-[60px] bg-[#FF5E01] text-white rounded-lg"
 

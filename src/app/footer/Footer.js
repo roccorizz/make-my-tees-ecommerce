@@ -132,28 +132,30 @@ const Footer = () => {
                     </div>
                     <div className='hidden md:grid lg:grid w-full  mt-[64px] mb-[37px] border-[1px] border-[#161616] opacity-[20%] justify-center'></div>
                 </div>
+                <div className='w-full text-[#161616]'>
 
-                <div className='max-w-[1351px]  text-gray-500 sm:ml-[18px] sm:mr-[16px] md:mx-auto lg:mx-auto'>
-                    <div className='  flex flex-row  mx-auto justify-between items-center'>
-                        <div className='text-center'>
-                            <Image className=' w-[126px] h-[14px] md:w-[199px] md:h-[22px] lg:w-[199px] lg:h-[22px]' src={logo} alt='logo' />
+                    <div className='max-w-[1351px] ml-[18px] mr-[16px] md:mx-auto lg:mx-auto'>
+                        <div className=' flex flex-row   justify-between items-center'>
+                            <div className='text-center'>
+                                <Image className=' w-[126px] h-[14px] md:w-[199px] md:h-[22px] lg:w-[199px] lg:h-[22px]' src={logo} alt='logo' />
+                            </div>
+                            <div className='hidden md:flex lg:flex text-center font-roboto text-[14px] no-underline space-x-[30px]'>
+                                <a href="">Terms</a>
+                                <a href="">Privacy</a>
+                                <a href="">Cookies</a>
+                            </div>
+                            <div className='text-center text-xl text-black mb-2 hidden md:flex lg:flex'>
+                                <a href='#' className='w-[28px] h-[28px] md:w-[35px] md:h-[35px] lg:w-[35px] lg:h-[35px] rounded-full border-[1.5px] bg-none border-[#161616] mx-1 inline-block pt-[3px] pl-[3px] md:pt-[6px] md:pl-[6px] lg:pt-[6px] lg:pl-[6px]'><FaLinkedinIn className='md:p-[2px] lg:p-[2px] p-[4px]' /></a>
+                                <a href='#' className='w-[28px] h-[28px] md:w-[35px] md:h-[35px] lg:w-[35px] lg:h-[35px] rounded-full border-[1.5px] bg-none border-[#161616] mx-1 inline-block pt-[3px] pl-[3px] md:pt-[6px] md:pl-[6px] lg:pt-[6px] lg:pl-[6px]'><FaFacebookF className='md:p-[2px] lg:p-[2px] p-[4px]' /></a>
+                                <a href='#' className='w-[28px] h-[28px] md:w-[35px] md:h-[35px] lg:w-[35px] lg:h-[35px] rounded-full border-[1.5px] bg-none border-[#161616] mx-1 inline-block pt-[3px] pl-[3px] md:pt-[6px] md:pl-[6px] lg:pt-[6px] lg:pl-[6px]'><FaTwitter className='md:p-[2px] lg:p-[2px] p-[4px]' /></a>
+                            </div>
+                            <Image className='flex md:hidden lg:hidden' src={socials} alt='' />
                         </div>
-                        <div className='hidden md:flex lg:flex text-center font-roboto text-[14px] no-underline space-x-[30px]'>
+                        <div className=' flex md:hidden lg:hidden text-center items-center justify-center font-roboto text-[14px] no-underline space-x-[19px] mt-[43px] my-[40px]'>
                             <a href="">Terms</a>
                             <a href="">Privacy</a>
                             <a href="">Cookies</a>
                         </div>
-                        <div className='text-center text-xl text-black mb-2 hidden md:flex lg:flex'>
-                            <a href='#' className='w-[28px] h-[28px] md:w-[35px] md:h-[35px] lg:w-[35px] lg:h-[35px] rounded-full border-[1.5px] bg-none border-[#161616] mx-1 inline-block pt-[3px] pl-[3px] md:pt-[6px] md:pl-[6px] lg:pt-[6px] lg:pl-[6px]'><FaLinkedinIn className='md:p-[2px] lg:p-[2px] p-[4px]' /></a>
-                            <a href='#' className='w-[28px] h-[28px] md:w-[35px] md:h-[35px] lg:w-[35px] lg:h-[35px] rounded-full border-[1.5px] bg-none border-[#161616] mx-1 inline-block pt-[3px] pl-[3px] md:pt-[6px] md:pl-[6px] lg:pt-[6px] lg:pl-[6px]'><FaFacebookF className='md:p-[2px] lg:p-[2px] p-[4px]' /></a>
-                            <a href='#' className='w-[28px] h-[28px] md:w-[35px] md:h-[35px] lg:w-[35px] lg:h-[35px] rounded-full border-[1.5px] bg-none border-[#161616] mx-1 inline-block pt-[3px] pl-[3px] md:pt-[6px] md:pl-[6px] lg:pt-[6px] lg:pl-[6px]'><FaTwitter className='md:p-[2px] lg:p-[2px] p-[4px]' /></a>
-                        </div>
-                        <Image className='flex md:hidden lg:hidden' src={socials} alt='' />
-                    </div>
-                    <div className=' flex md:hidden lg:hidden text-center items-center justify-center font-roboto text-[14px] no-underline space-x-[19px] mt-[43px] my-[40px]'>
-                        <a href="">Terms</a>
-                        <a href="">Privacy</a>
-                        <a href="">Cookies</a>
                     </div>
                 </div>
             </div>

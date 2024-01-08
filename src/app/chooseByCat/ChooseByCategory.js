@@ -130,7 +130,7 @@ const ChooseByCategory = () => {
                 </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-[36px] mt-[44px] md:mt-[54px] lg:mt-[54px]">{renderShirts()}</div>
-            {window.innerWidth < 640 && (
+            {windowWidth < 640 && (
                 <button
                     className="uppercase flex lg:hidden md:hidden text-[14px] md:text-[24px] lg:text-[24px] font-roboto-regular py-[12px] px-[23px] bg-[#FF5E01] text-white rounded-lg"
 
